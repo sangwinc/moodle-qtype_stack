@@ -369,6 +369,8 @@ class qtype_stack_edit_form extends question_edit_form {
                 get_string('testoptions', 'qtype_stack'), array('size' => 5));
         $nodegroup[] = $mform->createElement('selectyesno', $prtname . 'quiet',
                 get_string('quiet', 'qtype_stack'));
+        $nodegroup[] = $mform->createElement('checkbox', $prtname . 'delete', '',
+                get_string('delete', 'qtype_stack'));
 
         $elements[] = $mform->createElement('group', $prtname . 'node',
                 html_writer::tag('b', get_string('nodex', 'qtype_stack', '{no}')),
@@ -422,6 +424,7 @@ class qtype_stack_edit_form extends question_edit_form {
     }
 
     public function data_preprocessing($question) {
+
         $question = parent::data_preprocessing($question);
         $question = $this->data_preprocessing_options($question);
         $question = $this->data_preprocessing_inputs($question);
@@ -588,7 +591,7 @@ class qtype_stack_edit_form extends question_edit_form {
     public function validation($fromform, $files) {
         $errors = parent::validation($fromform, $files);
 
-        // (1) Validate all the fixes question fields.
+        // (1) Validate all the fixed question fields.
         $questionvars = new stack_cas_keyval($fromform['questionvariables'], null, null, 't');
         if (!$questionvars->get_valid()) {
             $errors['questionvariables'] = $questionvars->get_errors();

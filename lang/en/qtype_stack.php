@@ -54,6 +54,7 @@ $string['checkanswertype_link'] = '/question/type/stack/doc/doc.php/Authoring/In
 $string['complexno'] = 'Meaning and display of sqrt(-1)';
 $string['complexno_help'] = 'Controls the meaning and display of the symbol i and sqrt(-1)';
 $string['complexno_link'] = 'question/type/stack/doc/doc.php/Authoring/Options.md#sqrt_minus_one.';
+$string['delete'] = 'Delete';
 $string['defaultprtcorrectfeedback'] = 'Correct answer, well done.';
 $string['defaultprtincorrectfeedback'] = 'Incorrect answer.';
 $string['defaultprtpartiallycorrectfeedback'] = 'Your answer is partially correct.';
@@ -171,7 +172,7 @@ $string['testoptions_link'] = 'question/type/stack/doc/doc.php/Authoring/Answer_
 $string['testoptionsrequired'] = 'Test options are required for this test.';
 $string['variantsselectionseed'] = 'Random group';
 $string['variantsselectionseed_help'] = 'Normally you can leave this box blank. If, however, you want two different questions in a quiz to use the same random seed, then type the same string in this box for the two questions (and deploy the same set of random seeds, if you are using deployed versions) and the random seeds for the two questions will be synchronised.';
-$string['verifyquestionandupdate'] = 'Verify the question text and update the form';
+$string['verifyquestionandupdate'] = 'Verify and update the form';
 
 // Error reporting in the feedback form.
 $string['edit_form_error'] = 'Node {$a->no} {$a->field} has the following error: ';

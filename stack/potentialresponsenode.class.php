@@ -57,6 +57,11 @@ class stack_potentialresponse_node {
     private $quiet;
 
     /*
+    * @var boolean Used during editing to indicate this node should be removed.
+     */
+    private $delete;
+
+    /*
      * @var string Private notes/memos about this potential response.
      */
     private $notes;
